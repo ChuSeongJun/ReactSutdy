@@ -96,6 +96,8 @@ describe("주문을 테스트 한다", () => {
 
     it("사용자는 원하는 메뉴를 장바구니에 담고, 원하는 음식 갯수를 변경할 수 있다", () => {
         cy.visit("http://127.0.0.1:5173/restaurant/1");
+
+        //get 요청 가져와서 json 가져오기
         cy.intercept(
             {
                 method: "GET",
